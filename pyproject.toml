@@ -1,0 +1,51 @@
+[project]
+name = "dummyserver"
+description = "A simple FastAPI server with structured logging demo"
+authors = [
+    { name = "Demo", email = "demo@example.com" },
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.116.1",
+    "httpx>=0.28.1",
+    "structlog>=25.4.0",
+    "typer>=0.16.0",
+    "uvicorn>=0.35.0",
+]
+version = "0.1.0"
+
+[project.scripts]
+dummyserver = "dummyserver.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+packages = ["src/dummyserver"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort (import sorting)
+    "UP",  # pyupgrade
+    "B" ,  # flake8-bugbear
+    "SIM", # flake8-simplify
+    "A",   # flake8-builtins
+    "ANN", # flake8-annotations
+    "C"  , # flake8-comprehensions
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.1",
+]
+
+[tool.pyright]
+include = ["src/dummyserver"]
+typeCheckingMode = "strict"
