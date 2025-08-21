@@ -47,4 +47,3 @@ result-*
 .direnv/
 
 # UV
-uv.lock
