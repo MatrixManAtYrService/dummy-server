@@ -93,9 +93,3 @@ dummyserver/
 └── tests/
     └── test_server.py         # Tests with logging
 ```
-
-This demonstrates the same patterns as the rhizome project:
-- `nix run` starts a FastAPI server
-- `pytest -s` shows structured log output
-- Clean separation of concerns
-- Professional project structure
