@@ -1,6 +1,6 @@
 # Dummy Server
 
-A simple FastAPI server demonstration with structured logging using Nix.o
+A simple FastAPI server demonstration with structured logging using Nix.
 Featured in this video: https://vimeo.com/1113780459
 
 
